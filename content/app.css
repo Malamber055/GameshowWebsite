@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/background-main-page.png');
+    background-size: cover;
+}
+
+header {
+    background-color: #5d5763;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+/* Additional styles for the content div */
+div {
+    background-color: rgba(255, 255, 255, 0.8); /* Background color for the content div with some transparency */
+    padding: 20px;
+    margin: 20px;
+    text-align: center; /* Center-align the content within the div */
+}
+
+div h2 {
+    font-size: 2em; /* Set the font size to 2 times the default size */
+    font-weight: bold; /* Make the text bold */
+}
