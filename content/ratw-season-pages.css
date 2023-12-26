@@ -8,19 +8,23 @@ footer {
     width: 100%;
 }
 
+.main-content {
+    flex: 1; /* Take up the available space */
+    padding: 20px; /* Adjust as needed for spacing */
+}
+
 /* Hover effect for both buttons */
 .back-button:hover {
     background-color: #555;
 }
 
 /* Style for the table rows */
-tr:first-child, tr:nth-child(3), tr:nth-child(10), tr:nth-child(12) {
+.season-info-table tr:first-child, tr:nth-child(3), tr:nth-child(10), tr:nth-child(12) {
     background-color: purple; /* Apply background color to the 1st, 3rd, 10th, and 12th rows */
     color: white;
-    font-weight: bold;
 }
 
-tr:not(:first-child):not(:nth-child(3)):not(:nth-child(10)):not(:nth-child(12)) {
+.season-info-table tr:not(:first-child):not(:nth-child(3)):not(:nth-child(10)):not(:nth-child(12)) {
     background-color: rgb(81, 157, 243); /* Apply blue background color to all rows except specified ones */
     color: white; /* Set text color to white for these rows */
     text-align: left;
@@ -30,6 +34,9 @@ tr:not(:first-child):not(:nth-child(3)):not(:nth-child(10)):not(:nth-child(12)) 
 
 /* Align the table to the right */
 table {
+    position: fixed;
+    top: 0;
+    right: 0;
     float: right;
     vertical-align: right;
     margin-top: 0;
@@ -38,9 +45,47 @@ table {
     position: relative;
 }
 
+/* Style for the text within <p> tags */
+.additional-content p {
+    max-width: 1200px; /* Adjust the value as needed */
+    margin: 0 auto; /* Center the text by setting left and right margins to auto */
+    padding: 10px;
+}
+
 /* Style for the additional content */
 .additional-content {
     display: inline-block; /* Set display to inline-block */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Style for the "Development" paragraph */
+.additional-content p.development {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-weight: bold;
+    position: relative;
+    padding: 5px;
+}
+
+.additional-content p.development::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #333; /* Adjust the color of the line as needed */
+}
+
+/* Additional styles for the image and table */
+.left-image {
+    max-width: 1200px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.table-container {
+    display: inline-block; /* Set display to inline-block to have them side by side */
+    vertical-align: top; /* Align with the top of the paragraph */
+    margin-left: 20px; /* Add margin for spacing */
 }
 
 /* Style for the h1 title */
@@ -85,6 +130,61 @@ img#race-logo {
     text-decoration: none;
     border-width: 0.4cap;
     border-style: groove;
+}
+
+/* Style for the leaderboard table */
+.leaderboard-table {
+    border-collapse: collapse; /* Collapse the border spacing */
+    width: 100%; /* Ensure the table spans the full width */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Style for the table header */
+.leaderboard-table th {
+    background-color: #222; /* Darker Gray for table headers */
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+/* Style for cells within the leaderboard table */
+.leaderboard-table td {
+    padding: 10px; /* Add padding for better visibility */
+}
+
+/* Highlight the first row */
+.leaderboard-table tr {
+    color: white;
+    background-color: rgb(61, 61, 61);
+}
+
+/* Eliminated leaderboard box */
+.leaderboard-table td.eliminated {
+    background-color: rgb(247, 116, 116);
+    color: rgb(0, 0, 0);
+}
+
+/* Eliminated leaderboard box */
+.leaderboard-table td.saved {
+    background-color: rgb(0, 204, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* Style for 1st place */
+.leaderboard-table .first {
+    background-color: gold;
+    color: #222;
+}
+
+/* Style for 2nd place */
+.leaderboard-table .second {
+    background-color: silver;
+    color: #222;
+}
+
+/* Style for 3rd place */
+.leaderboard-table .third {
+    background-color: rgb(216, 106, 17);
+    color: #222;
 }
 
 
