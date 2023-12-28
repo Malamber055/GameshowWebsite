@@ -1,7 +1,7 @@
 let currentIndex = 0; // Keep track of the current team index
 
 const teamsData = [
-    { place: '1st', team: 'Dark & Skelly', image: '../content/images/ratw-season-1-duos/Dark & Skelly TR.png' /* other data */ },
+    { place: '1st', team: 'Dark & Skelly', image: '../content/images/ratw-season-1-duos/Dark & Skelly TR.png'},
     { place: '2nd', team: 'Ash & Lamp', image: '../content/images/ratw-season-1-duos/Ash & Lamp TR.png' /* other data */ },
     { place: '3rd', team: 'Chim & Harshi', image: '../content/images/ratw-season-1-duos/Harshi & Chim (RATW S1) TR.png' /* other data */ },
     { place: '4th', team: 'Emily & Kai', image: '../content/images/ratw-season-1-duos/Emily & Kai TR.png' /* other data */ },
@@ -14,6 +14,34 @@ const teamsData = [
     { place: '11th', team: 'Pods & Joseph', image: '../content/images/ratw-season-1-duos/Pods & Joseph TR.png' /* other data */ },
     { place: '12th', team: 'Sun & Sam', image: '../content/images/ratw-season-1-duos/Sun & Sam TR.png' /* other data */ },
 ];
+
+const usernames =[
+    {name: 'Dark', username: 'darkpvpzinho'},
+    {name: 'Skelly', username: 'MrNinjaSkelly'},
+    {name: 'Ash', username: 'Ash100985'},
+    {name: 'Lamp', username: 'lampentelectrabuzz'},
+    {name: 'Chim', username: 'xXxChimzZz'},
+    {name: 'Harshi', username: 'Harshiboyyy'},
+    {name: 'Emily', username: 'XxS1MPLY_EMILYxX'},
+    {name: 'Kai', username: 'foodking3'},
+    {name: 'Noah', username: 'TheRealTeals2'},
+    {name: 'Icy', username: 'thehunk128'},
+    {name: 'Husky', username: 'huskylover234565'},
+    {name: 'Lando', username: 'LandoFlorida14'},
+    {name: 'Anice', username: 'aniceboyperson'},
+    {name: 'Eraloss', username: 'AmoniLovesRoblox'},
+    {name: 'Ancient', username: 'iiAncient_Bear'},
+    {name: 'Candy', username: 'chad13516'},
+    {name: 'Josh', username: 'Blame_Joshua'},
+    {name: 'Jordan', username: 'MVPJordan7'},
+    {name: 'Monkey', username: 'XxMonkeyBoii'},
+    {name: 'Joe', username: 'adadman1'},
+    {name: 'Pods', username: 'coolgard781'},
+    {name: 'Joseph', username: 'Lightning42356'},
+    {name: 'Sun', username: 'sjokogirl'},
+    {name: 'Sam', username: 'samayomide'}
+];
+
 
 // Initialize the current team index
 let currentTeamIndex = 0;
@@ -60,6 +88,39 @@ function updateTeamInfo(index) {
                                     </div>
                                 </div>`;
 }
+
+// * NEED TO FIX THIS TABLE GENERATION * //
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to generate the HTML table
+    function generateTable(data) {
+        const tableContainer = document.getElementById('castList');
+        const table = document.createElement('table');
+
+        // Create the table header
+        const headerRow = table.insertRow();
+        const nameHeader = headerRow.insertCell(0);
+        const usernameHeader = headerRow.insertCell(1);
+        nameHeader.innerHTML = '<b>Name</b>';
+        usernameHeader.innerHTML = '<b>Username</b>';
+
+        // Populate the table with data
+        data.forEach(user => {
+            const row = table.insertRow();
+            const nameCell = row.insertCell(0);
+            const usernameCell = row.insertCell(1);
+            nameCell.textContent = user.name;
+            usernameCell.textContent = user.username;
+        });
+
+        // Append the table to the container
+        tableContainer.appendChild(table);
+    }
+
+    // Call the function with the provided data
+    generateTable(usernames);
+});
+
+
 
 // Initial call to show the first team when the page is loaded
 document.addEventListener('DOMContentLoaded', function () {
