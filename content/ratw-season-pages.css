@@ -17,15 +17,19 @@ footer {
 .back-button:hover {
     background-color: #555;
 }
+/* Adjust margins for buttons */
+button {
+    margin: 10px
+}
 
 /* Style for the table rows */
 .season-info-table tr:first-child, tr:nth-child(3), tr:nth-child(10), tr:nth-child(12) {
-    background-color: purple; /* Apply background color to the 1st, 3rd, 10th, and 12th rows */
+    background-color: rgb(0, 0, 0); /* Apply background color to the 1st, 3rd, 10th, and 12th rows */
     color: white;
 }
 
 .season-info-table tr:not(:first-child):not(:nth-child(3)):not(:nth-child(10)):not(:nth-child(12)) {
-    background-color: rgb(81, 157, 243); /* Apply blue background color to all rows except specified ones */
+    background-color: rgb(45, 49, 53); /* Apply blue background color to all rows except specified ones */
     color: white; /* Set text color to white for these rows */
     text-align: left;
     font-weight: lighter;
@@ -76,6 +80,17 @@ table {
     background-color: #333; /* Adjust the color of the line as needed */
 }
 
+.video-container {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content:center
+}
+
+.video-container iframe {
+    margin-bottom: 10px; /* Adjust as needed for spacing between videos */
+}
+
 /* Additional styles for the image and table */
 .left-image {
     max-width: 1200px; /* Adjust the width as needed */
@@ -101,13 +116,15 @@ body {
     margin: 20px;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('images/rio-de-janeiro.jpg');
+    background-image: url('images/ratw-season1-background.jpg');
+    background-position: center;
     background-size: cover;
+    
     /* filter: blur(5px); */
 }
 
 div {
-    background-color: rgba(255, 255, 255, 0.8); /* Background color for the content div with some transparency */
+    background-color: rgba(221, 221, 221, 0.8); /* Background color for the content div with some transparency */
     padding: 20px;
     margin: 20px;
     text-align: center; /* Center-align the content within the div */
@@ -185,6 +202,23 @@ img#race-logo {
 .leaderboard-table .third {
     background-color: rgb(216, 106, 17);
     color: #222;
+}
+
+/* Add this style to make the background transparent */
+#teamsContainer {
+    background-color: transparent;
+    margin-top: -20px;
+}
+
+/* Adjust the spacing between name and team placement */
+h2 {
+    margin-bottom: px; /* You can adjust the value as needed */
+}
+
+/* Picture of a floor for teams to look like they are standing on */
+#stage {
+    background-image: url(../content/images/stage_transprent.png);
+    background-color: transparent;
 }
 
 

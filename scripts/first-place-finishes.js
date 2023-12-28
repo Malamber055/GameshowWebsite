@@ -9,7 +9,7 @@ rows.forEach(row => {
         const content = cell.textContent.trim();
 
         // Check if it's "1st"
-        if (content === '1st') {
+        if (index !== 0 && content === '1st') {
             // Add a class for styling to the current cell
             cell.classList.add('first');
         }

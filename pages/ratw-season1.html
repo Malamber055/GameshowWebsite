@@ -10,6 +10,8 @@
 
     <!-- Link to the external JavaScript file -->
     <script type="text/javascript" src="../scripts/navigation.js"></script>
+    <script type="text/javascript" src="../scripts/ratw-season1-team-view.js"></script>
+    
     
 </head>
 <body>
@@ -26,10 +28,30 @@
         <p> Applications for Race Around the World Season 1 were released on the 24th of January 2022. Marking it to be the first ever season to be held since Outlaster 3.</p>
         <p>The season was split into 5 different episodes. In which 2 eliminations would occur in each episode. Originally the Season was supposed to be a continuation of the Amazing Race series but was later changed to Race Around the World. Episodes aired throughout February 6th to February 14th 2022.</p>
 
+        <div class="video-container">
+
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/zG-B_9dOYCA?si=bZP2Mjvla7FbhGWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/f8sfiNlXwaY?si=ixpFKKf9q83v1bVD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/FoKtI_2NTQ0?si=8wttROI5o9ci8x91" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/q_yhp0F2hgs?si=M6ZhgYNYaYqfD-T0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/khlrDFDF60Y?si=KXtPaF_s2qK_lze0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
         <p class="development">Teams and Placements</p>
 
         <!-- Image on the left side -->
-        <img src="../content/images/ratw-season1-teams.png" alt="Teams and their placements" class="left-image">
+        <!--- <img src="../content/images/ratw-season1-teams.png" alt="Teams and their placements" class="left-image"> --->
+        <!-- Container for Teams & Placements -->
+        <button id="button" onclick="showPreviousTeam()">Previous Team</button>
+        <button id="button" onclick="showNextTeam()">Next Team</button>
+        <div id="teamsContainer">
+            
+        </div>
+        
 
         <p class="development">Leaderboard</p>
 
