@@ -96,6 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const tableContainer = document.getElementById('castList');
         const table = document.createElement('table');
 
+        // Adding the custom style for the castlist table
+        table.classList.add('castList-table');
+
+
         // Create the table header
         const headerRow = table.insertRow();
         const nameHeader = headerRow.insertCell(0);
