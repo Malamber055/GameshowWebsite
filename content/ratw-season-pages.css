@@ -205,6 +205,21 @@ img#race-logo {
     color: #222;
 }
 
+th.leg {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th.leg img {
+    display: block;
+    width: 50px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Adjust the margin as needed to position the image below the text */
+    margin-left: 10px;
+    
+}
+
 /* Add this style to make the background transparent */
 #teamsContainer {
     background-color: transparent;
@@ -242,6 +257,22 @@ h2 {
 #castList {
     display: flex; /* Set display to inline-block */
     margin-left: 20px; /* Add margin for spacing */
+}
+
+#statsTable {
+    width: 100%;
+    max-width: 400px; /* Set the maximum width as per your preference */
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+.statsTable th, .statsTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #000000;
+    background-color:beige;
+    color: #000;
+    height: -10%;
 }
 
 
