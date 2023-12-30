@@ -30,6 +30,21 @@ const teamStats = [
     { name: 'Sun & Sam', legsCompeted: 1, legsWon: 0, countriesVisited: ['French Polynesia'] },
 ];
 
+const teamAverages = [
+    { name: 'Dark & Skelly', average: 2.77, original: 1, new: 1, positionChange: 0 },
+    { name: 'Ash & Lamp', average: 2.92, original: 2, new: 2, positionChange: 0 },
+    { name: 'Anice & Eraloss', average: 3.25, original: 7, new: 3, positionChange: 4 },
+    { name: 'Noah & Icy', average: 3.50, original: 5, new: 4, positionChange: 1 },
+    { name: 'Chim & Harshi', average: 4.15, original: 3, new: 5, positionChange: -2 },
+    { name: 'Emily & Kai', average: 4.50, original: 4, new: 6, positionChange: -2 },
+    { name: 'Josh & Jordan', average: 4.50, original: 9, new: 7, positionChange: 2 },
+    { name: 'Husky & Lando', average: 7.11, original: 6, new: 8, positionChange: -2 },
+    { name: 'Ancient & Candy', average: 8.33, original: 8, new: 9, positionChange: -1 },
+    { name: 'Monkey & Joe', average: 8.67, original: 10, new: 10, positionChange: 0 },
+    { name: 'Pods & Joseph', average: 10.50, original: 11, new: 11, positionChange: 0 },
+    { name: 'Sun & Sam', average: 12.00, original: 12, new: 12, positionChange: 0 },
+];
+
 const usernames =[
     {name: 'Dark', username: 'darkpvpzinho'},
     {name: 'Skelly', username: 'MrNinjaSkelly'},
@@ -119,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const headerRow = table.insertRow();
         const nameHeader = headerRow.insertCell(0);
         const usernameHeader = headerRow.insertCell(1);
-        nameHeader.innerHTML = '<b>Name</b>';
-        usernameHeader.innerHTML = '<b>Username</b>';
+        nameHeader.innerHTML = '<b>Name:</b>';
+        usernameHeader.innerHTML = '<b>Username:</b>';
 
         // Populate the table with data
         data.forEach(user => {
@@ -141,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function statsTable(data) {
-    const tableContainer = document.getElementById('castList');
+    const tableContainer = document.getElementById('teamStats');
     const table = document.createElement('table');
 
     // Adding the custom style for the castlist table
@@ -154,10 +169,10 @@ function statsTable(data) {
     const legsWonHeader = headerRow.insertCell(2);
     const countriesVisitedHeader = headerRow.insertCell(3);
     
-    nameHeader.innerHTML = '<b>Name</b>';
-    legsCompetedHeader.innerHTML = '<b>Legs Competed</b>';
-    legsWonHeader.innerHTML = '<b>Legs Won</b>';
-    countriesVisitedHeader.innerHTML = '<b>Countries Visited</b>';
+    nameHeader.innerHTML = '<b>Team:</b>';
+    legsCompetedHeader.innerHTML = '<b>Legs Competed:</b>';
+    legsWonHeader.innerHTML = '<b>Legs Won:</b>';
+    countriesVisitedHeader.innerHTML = '<b>Countries Visited:</b>';
 
     // Populate the table with data
     data.forEach(team => {
@@ -177,6 +192,54 @@ function statsTable(data) {
     tableContainer.appendChild(table);
 }
 
+
+function teamAveragesTable(data) {
+    const tableContainer = document.getElementById('teamAverages'); // Change 'teamStats' to the actual ID of your container
+    const table = document.createElement('table');
+
+    // Adding the custom style for the teamStats table
+    table.classList.add('statsTable');
+
+    // Create the table header
+    const headerRow = table.insertRow();
+    const nameHeader = headerRow.insertCell(0);
+    const averageHeader = headerRow.insertCell(1);
+    const originalHeader = headerRow.insertCell(2);
+    const newHeader = headerRow.insertCell(3);
+    const positionChangeHeader = headerRow.insertCell(4);
+
+    nameHeader.innerHTML = '<b>Name:</b>';
+    averageHeader.innerHTML = '<b>Average:</b>';
+    originalHeader.innerHTML = '<b>Original:</b>';
+    newHeader.innerHTML = '<b>New:</b>';
+    positionChangeHeader.innerHTML = '<b>Position Change:</b>';
+
+    // Populate the table with data
+    data.forEach(team => {
+        const row = table.insertRow();
+        const nameCell = row.insertCell(0);
+        const averageCell = row.insertCell(1);
+        const originalCell = row.insertCell(2);
+        const newCell = row.insertCell(3);
+        const positionChangeCell = row.insertCell(4);
+
+        nameCell.textContent = team.name;
+        averageCell.textContent = team.average;
+        originalCell.textContent = team.original;
+        newCell.textContent = team.new;
+        positionChangeCell.textContent = team.positionChange;
+    });
+
+    // Append the table to the container
+    tableContainer.appendChild(table);
+}
+
+
+
+// Call the function with your team Averages when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    teamAveragesTable(teamAverages);
+});
 
 // Call the function with your team Stats when the page loads
 document.addEventListener('DOMContentLoaded', function () {
