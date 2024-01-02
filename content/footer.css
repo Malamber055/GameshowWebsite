@@ -1,0 +1,35 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #footerContainer {
+    background-color: #333; /* Choose a background color for your footer */
+    padding: 10px; /* Adjust the padding as needed */
+    text-align: center;
+  }
+  
+  #footerContainer a {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the margin between icons */
+  }
+  
+  #footerContainer img {
+    width: 30px; /* Adjust the width of the icons as needed */
+    height: 30px; /* Adjust the height of the icons as needed */
+    border-radius: 50%; /* Optional: Add rounded corners to the icons */
+  }
+  
+  footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: white; /* Text color for the footer */
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Make the footer span the full width of the viewport */
+    margin-top: auto; /* Push the footer to the bottom */
+  }
