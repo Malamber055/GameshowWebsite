@@ -12,6 +12,15 @@ button {
     margin: 10px
 }
 
+a {
+    color: #0077cc; /* Change this color to your preferred link color */
+    text-decoration: none; /* Optional: removes underline, you can keep it if you want underlined links */
+  }
+
+  a:hover {
+    color: #004466; /* Change this color to your preferred link color on hover */
+  }
+
 /* Style for the table rows in season-info-table */
 .season-info-table tr:first-child,
 .season-info-table tr:nth-child(3),
